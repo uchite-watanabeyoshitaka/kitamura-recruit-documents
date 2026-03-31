@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社キタムラ｜採用資料一式</title>
+    <meta name="description" content="株式会社キタムラの高校生向け採用資料一式をご覧いただけます。会社紹介・施工実績・研修制度・先輩の声をまとめています。">
+
+    <!-- OGP -->
+    <meta property="og:title" content="株式会社キタムラ｜採用資料一式">
+    <meta property="og:description" content="創業1933年。旭川の左官工事会社キタムラの採用資料をご覧いただけます。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uchite-watanabeyoshitaka.github.io/kitamura-recruit_sample/documents.html">
+    <meta property="og:image" content="https://uchite-watanabeyoshitaka.github.io/kitamura-recruit_sample/slides/slide_1.png">
+    <meta property="og:site_name" content="株式会社キタムラ 採用資料">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="株式会社キタムラ｜採用資料一式">
+    <meta name="twitter:description" content="創業1933年。旭川の左官工事会社キタムラの採用資料をご覧いただけます。">
+    <meta name="twitter:image" content="https://uchite-watanabeyoshitaka.github.io/kitamura-recruit_sample/slides/slide_1.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts + YakuHanJP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.0.0/dist/css/yakuhanjp.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-navy': '#1D257A',
+                        'brand-navy-light': '#2E3A9E',
+                        'brand-blue': '#0071BD',
+                        'brand-blue-light': '#3399D6',
+                        'brand-dark': '#1A1A2E',
+                        'brand-cream': '#F5F7FA',
+                    },
+                    fontFamily: {
+                        sans: ['YakuHanJP', '"Noto Sans JP"', '"Hiragino Sans"', '"Segoe UI"', '"Yu Gothic"', 'Meiryo', 'Arial', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: YakuHanJP, 'Noto Sans JP', 'Hiragino Sans', 'Segoe UI', 'Yu Gothic', Meiryo, Arial, sans-serif;
+            background-color: #ECEEF4;
+            color: #1A1A2E;
+        }
+        .card-thumb {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-thumb:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(29, 37, 122, 0.15);
+        }
+        .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.02em;
+        }
+        /* Carousel */
+        .carousel-track {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-track::-webkit-scrollbar { display: none; }
+        .carousel-slide {
+            scroll-snap-align: start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .carousel-slide:hover {
+            transform: scale(1.01);
+            box-shadow: 0 12px 40px rgba(29, 37, 122, 0.2);
+        }
+        .carousel-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #D1D5DB;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .carousel-dot.active {
+            background: #1D257A;
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        .tag-pick { background: #1D257A; color: #FFFFFF; }
+        .tag-new  { background: #0071BD; color: #FFFFFF; }
+        .tag-test { background: #E8EBF7; color: #1D257A; }
+        .tag-info { background: #E0F0FB; color: #0071BD; }
+
+        /* Lightbox */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.85);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.4);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .lightbox-close:hover { opacity: 1; }
+
+        /* Accordion */
+        .accordion-toggle { cursor: pointer; }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .accordion-body.open {
+            opacity: 1;
+        }
+        .accordion-chevron {
+            transition: transform 0.3s ease;
+        }
+        .accordion-chevron.rotate {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Accordion Button */
+        .accordion-cta {
+            position: relative;
+            background: linear-gradient(135deg, #1D257A, #0071BD);
+            border: none;
+            overflow: hidden;
+        }
+        .accordion-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+            opacity: 0;
+            animation: ctaShimmer 2.5s ease-in-out infinite;
+        }
+        @keyframes ctaShimmer {
+            0%, 100% { opacity: 0; transform: translateX(-100%); }
+            50% { opacity: 1; transform: translateX(100%); }
+        }
+        .accordion-cta::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #0071BD, #1D257A, #0071BD);
+            z-index: -1;
+            animation: borderGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes borderGlow {
+            0% { opacity: 0.4; filter: blur(4px); }
+            100% { opacity: 0.8; filter: blur(8px); }
+        }
+        .accordion-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(29, 37, 122, 0.4);
+        }
+        .accordion-cta .cta-pulse {
+            animation: ctaPulse 2s ease-in-out infinite;
+        }
+        @keyframes ctaPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        .accordion-cta.opened {
+            background: linear-gradient(135deg, #2E3A9E, #3399D6);
+        }
+        .accordion-cta.opened::before,
+        .accordion-cta.opened::after {
+            animation: none;
+            opacity: 0;
+        }
+        .accordion-cta.opened .cta-pulse {
+            animation: none;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            user-select: none;
+            padding: 8px;
+        }
+        .lightbox-nav:hover { opacity: 1; }
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+
+        @media (max-width: 640px) {
+            .hero-grid-mobile { grid-template-columns: 1fr 1fr !important; grid-template-rows: auto !important; }
+            .hero-grid-mobile > :nth-child(2) { grid-row: auto !important; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">&#8249;</span>
+        <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">&#8250;</span>
+    </div>
+
+    <!-- Page Container -->
+    <div class="max-w-[820px] mx-auto bg-white min-h-screen shadow-sm">
+
+        <!-- Hero: フォトコラージュ + キャッチコピー -->
+        <div class="w-full relative overflow-hidden bg-brand-navy" style="min-height: 280px;">
+            <!-- Photo Grid Background -->
+            <div class="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-[2px] hero-grid-mobile">
+                <div class="overflow-hidden">
+                    <img src="images/recruit-01.jpg"
+                         alt="現場作業" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden row-span-2">
+                    <img src="images/company-01.jpg"
+                         alt="左官工事" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="images/recruit-02.jpg"
+                         alt="チーム" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="images/services.jpg"
+                         alt="施工" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="images/recruit-03.jpg"
+                         alt="職場風景" class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/95 via-brand-navy/60 to-brand-navy/30"></div>
+            <!-- Text -->
+            <div class="relative z-10 flex flex-col items-center justify-end h-full px-6 pb-7 pt-16" style="min-height: 280px;">
+                <p class="font-display font-black text-3xl md:text-4xl text-white tracking-tight leading-tight text-center drop-shadow-lg">
+                    手に職を、一生ものに。
+                </p>
+                <p class="mt-2 text-sm text-white/70 tracking-wide text-center">
+                    株式会社キタムラ｜高校生向け採用資料
+                </p>
+                <!-- ミニキーワード -->
+                <div class="mt-4 flex flex-wrap justify-center gap-2">
+                    <span class="text-[10px] font-bold text-white/90 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full">左官工事</span>
+                    <span class="text-[10px] font-bold text-white/90 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full">創業93年</span>
+                    <span class="text-[10px] font-bold text-white/90 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full">高卒から活躍</span>
+                    <span class="text-[10px] font-bold text-white/90 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full">北海道</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo + Title + 一行メッセージ -->
+        <div class="flex items-center gap-4 px-6 pt-8 pb-3">
+            <div class="flex-shrink-0">
+                <img src="kitamura_logo.png" alt="株式会社キタムラ" style="height: 36px; width: auto;">
+            </div>
+            <div>
+                <h1 class="text-base md:text-lg font-bold text-brand-dark leading-tight">
+                    株式会社キタムラ
+                </h1>
+                <p class="text-[11px] text-gray-400 mt-0.5">創業1933年｜北海道旭川市｜左官工事</p>
+            </div>
+            <a href="https://reme-more.com/plate/7d35661a-68c3-4751-94db-322e4756dc28"
+               target="_blank" rel="noopener"
+               class="ml-auto flex-shrink-0 text-[11px] font-bold text-brand-blue border border-brand-blue/30 hover:bg-brand-blue hover:text-white px-3 py-1.5 rounded-full transition-colors whitespace-nowrap">
+                名刺を見る
+            </a>
+        </div>
+
+        <!-- メインメッセージ -->
+        <div class="px-6 pt-2 pb-6">
+            <p class="text-[13px] text-gray-500 leading-relaxed">高校生のみなさんへ — スライドを見て、キタムラの仕事を知ってください。</p>
+        </div>
+
+        <!-- そもそも左官って？ -->
+        <div class="mx-6 mb-8 p-5 rounded-2xl bg-brand-cream border border-brand-blue/15 relative">
+            <span class="absolute -top-3 left-5 bg-brand-blue text-white text-[11px] font-bold px-3 py-0.5 rounded-full">そもそも左官って？</span>
+            <p class="text-sm text-brand-dark leading-relaxed mt-1">
+                建物の"肌"を仕上げるプロ ── それが左官。<strong class="text-brand-navy">モルタル</strong>（セメントを混ぜた材料）・<strong class="text-brand-navy">漆喰（しっくい）</strong>をコテで塗り、建物に"表情"を与える。── いわば<strong class="text-brand-blue">建築のメイクアップアーティスト</strong>です。
+            </p>
+            <div class="mt-3 grid grid-cols-3 gap-2 text-center">
+                <div class="bg-white rounded-lg p-2.5 border border-gray-100">
+                    <p class="text-base">🏛️</p>
+                    <p class="text-[11px] font-bold text-brand-dark mt-0.5">公共建築</p>
+                    <p class="text-[10px] text-gray-500">市役所・動物園</p>
+                </div>
+                <div class="bg-white rounded-lg p-2.5 border border-gray-100">
+                    <p class="text-base">🏭</p>
+                    <p class="text-[11px] font-bold text-brand-dark mt-0.5">産業施設</p>
+                    <p class="text-[10px] text-gray-500">ラピダス新工場</p>
+                </div>
+                <div class="bg-white rounded-lg p-2.5 border border-gray-100">
+                    <p class="text-base">🤖</p>
+                    <p class="text-[11px] font-bold text-brand-dark mt-0.5">最新技術</p>
+                    <p class="text-[10px] text-gray-500">ロボット×職人</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Title: 採用スライド（カルーセル） -->
+        <div class="px-6 pb-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-1 h-6 bg-brand-navy rounded-full"></div>
+                <h2 class="text-lg font-bold text-brand-dark">採用スライド</h2>
+            </div>
+            <p class="text-[11px] text-gray-400 flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                スワイプで次へ
+            </p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative mb-8">
+            <!-- Track -->
+            <div id="carousel" class="carousel-track flex gap-4 overflow-x-auto scroll-smooth px-6 pb-4" style="-webkit-overflow-scrolling: touch;">
+
+                <!-- Slide 1: 給料・休日・待遇 (NEW / PICK UP) -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(0)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/new_slide_1.png" alt="給料・休日・待遇" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <span class="tag tag-pick absolute top-3 left-3 text-[11px] px-2.5 py-1">PICK UP</span>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">01 — BENEFITS</p>
+                            <p class="text-lg font-bold text-white leading-snug">気になるお金と休み、<br>ぜんぶ公開します。</p>
+                            <p class="text-xs text-white/70 mt-1.5">初任給・年間休日・福利厚生・賞与</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: 1日の流れ (NEW) -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(1)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/new_slide_2.png" alt="1日の流れ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <span class="tag tag-new absolute top-3 left-3 text-[11px] px-2.5 py-1">NEW</span>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">02 — ONE DAY</p>
+                            <p class="text-lg font-bold text-white leading-snug">左官職人の1日って、<br>どんな感じ？</p>
+                            <p class="text-xs text-white/70 mt-1.5">出社から退勤までのリアルな流れ</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: 先輩の声 -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(2)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/slide_6.png" alt="先輩の声" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <span class="tag tag-new absolute top-3 left-3 text-[11px] px-2.5 py-1">REAL VOICE</span>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">03 — VOICE</p>
+                            <p class="text-lg font-bold text-white leading-snug">19歳の先輩たちが語る、<br>キタムラのリアル</p>
+                            <p class="text-xs text-white/70 mt-1.5">伊藤さん・小松さんの入社後の声</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: 研修制度 -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(3)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/slide_5.png" alt="研修制度" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">04 — TRAINING</p>
+                            <p class="text-lg font-bold text-white leading-snug">いきなり現場には<br>出しません</p>
+                            <p class="text-xs text-white/70 mt-1.5">「見て覚えろ」の時代は終わり</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: キャリアパス (NEW) -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(4)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/new_slide_5.png" alt="キャリアパス" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <span class="tag tag-new absolute top-3 left-3 text-[11px] px-2.5 py-1">NEW</span>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">05 — CAREER</p>
+                            <p class="text-lg font-bold text-white leading-snug">「手に職」は、一生モノ。</p>
+                            <p class="text-xs text-white/70 mt-1.5">入社→一人前→リーダー→幹部・独立</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: 左官とは -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(5)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/slide_2.png" alt="左官の仕事" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">06 — CRAFT</p>
+                            <p class="text-lg font-bold text-white leading-snug">左官は、建築の<br>メイクアップアーティスト</p>
+                            <p class="text-xs text-white/70 mt-1.5">AIには真似できない手仕事の技術</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: 施工実績 -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(6)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/slide_3.png" alt="施工実績" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">07 — WORKS</p>
+                            <p class="text-lg font-bold text-white leading-snug">あなたも知ってる建物、<br>キタムラがつくりました</p>
+                            <p class="text-xs text-white/70 mt-1.5">旭川市役所・旭山動物園・ラピダス新工場</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8: ロボット×職人 -->
+                <div class="carousel-slide flex-shrink-0 w-[85%] md:w-[75%] rounded-2xl overflow-hidden relative cursor-pointer group" onclick="openLightbox(7)">
+                    <div class="aspect-[16/10] relative">
+                        <img src="slides/slide_4.png" alt="ロボット×職人" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <span class="tag tag-info absolute top-3 left-3 text-[11px] px-2.5 py-1">TECH</span>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <p class="text-[11px] font-bold text-white/60 tracking-widest mb-1">08 — FUTURE</p>
+                            <p class="text-lg font-bold text-white leading-snug">ロボット × 職人の未来</p>
+                            <p class="text-xs text-white/70 mt-1.5">最新技術と伝統技術の融合</p>
+                        </div>
+                        <div class="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Progress bar + Dots -->
+            <div class="px-6 flex items-center gap-3">
+                <div class="flex gap-1.5" id="carousel-dots"></div>
+                <div class="flex-1 h-[3px] bg-gray-100 rounded-full overflow-hidden">
+                    <div id="carousel-progress" class="h-full bg-brand-navy rounded-full transition-all duration-300" style="width: 12.5%"></div>
+                </div>
+                <span id="carousel-counter" class="text-[11px] font-bold text-gray-400 tabular-nums">1 / 8</span>
+            </div>
+        </div>
+
+        <!-- 適性診断 CTA（カルーセル直後・独立ブロック） -->
+        <div class="mx-6 mt-10 mb-10">
+            <a href="https://uchite-watanabeyoshitaka.github.io/kitamura-recruit_sample/#test"
+               target="_blank" rel="noopener"
+               class="block rounded-2xl overflow-hidden relative group card-thumb shindan-cta">
+                <div class="p-6 md:p-8 text-white text-center relative overflow-hidden" style="background: linear-gradient(135deg, #1D257A 0%, #0071BD 50%, #1D257A 100%);">
+                    <!-- 放射状パターン背景 -->
+                    <div class="absolute inset-0 opacity-[0.08]" style="background: repeating-conic-gradient(transparent 0deg, transparent 4deg, white 4deg, white 5deg);"></div>
+                    <!-- 斜めストライプ -->
+                    <div class="absolute inset-0 opacity-[0.06]" style="background: repeating-linear-gradient(-45deg, transparent, transparent 10px, white 10px, white 12px);"></div>
+
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-[11px] font-bold px-3 py-1 rounded-full mb-3 animate-bounce" style="animation-duration: 2s;">
+                            <span>GAME</span>
+                            <span class="opacity-70">たった10問・1分</span>
+                        </div>
+                        <p class="text-lg text-white/80 font-bold mb-1">あなたは何タイプ...？</p>
+                        <p class="text-2xl md:text-3xl font-bold leading-tight">
+                            左官職人 適性診断
+                        </p>
+                        <p class="text-sm text-white/70 mt-2">意外な結果が出るかも...!?</p>
+                        <div class="mt-4 inline-flex items-center gap-2 bg-white text-brand-navy font-bold text-sm px-7 py-3.5 rounded-full group-hover:scale-105 transition-transform shadow-lg shadow-black/20">
+                            <span>診断してみる</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- アコーディオン: 会社の詳細（左官説明・数字・理念・概要・拠点） -->
+        <div class="mx-6 mb-10">
+            <div id="accordion-trigger"
+                 class="accordion-toggle accordion-cta rounded-xl p-4 flex items-center justify-between gap-4 transition-all duration-300"
+                 onclick="toggleAccordion()">
+                <div class="flex items-center gap-3">
+                    <div class="cta-pulse w-9 h-9 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-white leading-snug">会社をもっと詳しく知りたい方はここをチェック!</p>
+                        <p class="text-[10px] text-white/50 mt-0.5">左官の仕事・数字・企業理念・会社概要・拠点情報</p>
+                    </div>
+                </div>
+                <svg id="accordion-chevron" class="accordion-chevron w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </div>
+
+            <!-- アコーディオン本体 -->
+            <div id="accordion-body" class="accordion-body">
+                <div class="pt-4 space-y-4">
+
+                    <!-- 数字で見るキタムラ -->
+                    <div class="p-5 rounded-xl bg-brand-cream border border-gray-100">
+                        <p class="text-xs font-bold text-brand-navy tracking-widest mb-3">NUMBERS ― 数字で見るキタムラ</p>
+                        <div class="grid grid-cols-3 gap-2.5 text-center">
+                            <div class="bg-white rounded-lg p-2.5">
+                                <p class="text-xl md:text-2xl font-bold text-brand-navy leading-none">1933</p>
+                                <p class="text-[10px] text-gray-500 mt-1">創業</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-2.5">
+                                <p class="text-xl md:text-2xl font-bold text-brand-blue leading-none">48<span class="text-xs">名</span></p>
+                                <p class="text-[10px] text-gray-500 mt-1">従業員</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-2.5">
+                                <p class="text-xl md:text-2xl font-bold text-brand-navy leading-none">3<span class="text-xs">拠点</span></p>
+                                <p class="text-[10px] text-gray-500 mt-1">旭川・札幌・苫小牧</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 企業理念 -->
+                    <div class="p-5 rounded-xl bg-white border border-gray-100">
+                        <p class="text-xs font-bold text-brand-navy tracking-widest mb-2">PHILOSOPHY ― 企業理念</p>
+                        <p class="text-sm text-brand-dark leading-relaxed">
+                            卓越した技術と誠実なものづくりを通じて、顧客の期待に応え、地域社会の発展に貢献します。社員一人ひとりの成長を支援し、働きがいのある職場づくりを進めます。
+                        </p>
+                        <div class="mt-3 p-3 rounded-lg bg-gradient-to-r from-brand-navy/5 to-brand-blue/5 border-l-4 border-brand-navy">
+                            <p class="text-xs font-bold text-brand-navy mb-1">VISION</p>
+                            <p class="text-[11px] text-gray-600 leading-relaxed">
+                                「建築物の美しさと耐久性を支えるプロフェッショナル集団」として、技術革新と伝統技術の継承を両立します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 会社概要テーブル -->
+                    <div class="p-5 rounded-xl bg-white border border-gray-100">
+                        <p class="text-xs font-bold text-brand-navy tracking-widest mb-2">COMPANY ― 会社概要</p>
+                        <div class="divide-y divide-gray-100 text-sm">
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">会社名</span><span class="text-brand-dark font-medium">株式会社キタムラ</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">代表取締役</span><span class="text-brand-dark font-medium">深貝 賢生</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">創業</span><span class="text-brand-dark font-medium">昭和8年（1933年）</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">資本金</span><span class="text-brand-dark font-medium">2,610万円</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">従業員数</span><span class="text-brand-dark font-medium">48名</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">営業内容</span><span class="text-brand-dark font-medium">左官工事業・タイル工事業・Cパネル工事業</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400">営業地域</span><span class="text-brand-dark font-medium">北海道全域</span></div>
+                            <div class="flex flex-col sm:flex-row py-2 gap-0.5 items-start"><span class="sm:w-24 sm:flex-shrink-0 text-xs font-bold text-gray-400 sm:pt-0.5">主要取引先</span><span class="text-brand-dark font-medium">鹿島建設 / 大成建設 / 五洋建設 / 廣野組 / 新谷建設</span></div>
+                        </div>
+                    </div>
+
+                    <!-- 拠点一覧 -->
+                    <div class="p-5 rounded-xl bg-white border border-gray-100">
+                        <p class="text-xs font-bold text-brand-navy tracking-widest mb-2">OFFICES ― 拠点一覧</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3 p-2.5 rounded-lg bg-brand-cream">
+                                <div class="w-7 h-7 bg-brand-navy rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-brand-dark">本社 — 旭川市豊岡11条1丁目1-23</p>
+                                    <p class="text-[10px] text-gray-500">TEL 0166-32-5566</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2.5 rounded-lg bg-brand-cream">
+                                <div class="w-7 h-7 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-brand-dark">札幌営業所 — 札幌市東区北36条東21丁目6-16</p>
+                                    <p class="text-[10px] text-gray-500">TEL 011-788-9607</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-2.5 rounded-lg bg-brand-cream">
+                                <div class="w-7 h-7 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-brand-dark">苫小牧営業所 — 苫小牧市幸町2丁目6-12</p>
+                                    <p class="text-[10px] text-gray-500">TEL/FAX 0144-32-8711</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: リンク集 -->
+        <div class="px-6 pt-4 pb-4 flex items-center gap-3">
+            <div class="w-1 h-6 bg-brand-blue rounded-full"></div>
+            <h2 class="text-sm font-bold text-gray-400">もっと知りたい方へ</h2>
+        </div>
+
+        <div class="px-6 pb-10 space-y-3">
+            <!-- 採用サイトリンク -->
+            <a href="https://uchite-watanabeyoshitaka.github.io/kitamura-recruit_sample/"
+               target="_blank" rel="noopener"
+               class="card-thumb flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:border-brand-blue">
+                <div class="w-12 h-12 rounded-lg bg-brand-cream flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold text-brand-dark">高校生採用サイト</p>
+                    <p class="text-xs text-gray-400 mt-0.5">会社の魅力・働き方・先輩の声をまとめたサイト</p>
+                </div>
+                <svg class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+
+            <!-- 会社案内（保護者向け） -->
+            <a href="http://kabu-kitamura.co.jp/wordpress/aboutus/"
+               target="_blank" rel="noopener"
+               class="card-thumb flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:border-brand-blue">
+                <div class="w-12 h-12 rounded-lg bg-brand-cream flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold text-brand-dark">会社案内（保護者・先生向け）</p>
+                    <p class="text-xs text-gray-400 mt-0.5">経営基盤・福利厚生・企業概要の詳細</p>
+                </div>
+                <span class="tag tag-info flex-shrink-0">公式</span>
+                <svg class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/kitamura.sns/"
+               target="_blank" rel="noopener"
+               class="card-thumb flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:border-brand-blue">
+                <div class="w-12 h-12 rounded-lg bg-brand-cream flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-brand-blue" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-bold text-brand-dark">Instagram @kitamura.sns</p>
+                    <p class="text-xs text-gray-400 mt-0.5">現場の様子・社員の日常を発信中</p>
+                </div>
+                <svg class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Contact Bar -->
+        <div class="mx-6 mb-10 p-6 rounded-xl bg-gradient-to-r from-brand-navy to-brand-blue text-white text-center">
+            <p class="text-sm font-bold">見学・質問、お気軽にどうぞ！</p>
+            <div class="mt-2 flex items-center justify-center gap-4 flex-wrap">
+                <a href="tel:0166-32-5566" class="text-sm font-bold hover:underline flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    0166-32-5566
+                </a>
+                <span class="text-white/40 hidden sm:inline">|</span>
+                <a href="https://reme-more.com/plate/7d35661a-68c3-4751-94db-322e4756dc28"
+                   target="_blank" rel="noopener"
+                   class="text-sm font-bold hover:underline flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+                    </svg>
+                    電子名刺
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="px-6 py-4 border-t border-gray-100 flex justify-between items-center">
+            <span class="text-xs text-gray-400">株式会社キタムラ</span>
+            <span class="text-xs text-gray-400">&copy; 2025 KITAMURA Co., Ltd.</span>
+        </div>
+
+    </div>
+
+    <!-- Carousel Script -->
+    <script>
+        (function() {
+            const track = document.getElementById('carousel');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const progressBar = document.getElementById('carousel-progress');
+            const counter = document.getElementById('carousel-counter');
+            const slideCount = 8;
+            let currentIndex = 0;
+            let autoplayTimer;
+
+            // Create dots
+            for (let i = 0; i < slideCount; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                dot.onclick = function() { scrollToSlide(i); };
+                dotsContainer.appendChild(dot);
+            }
+
+            function updateUI(index) {
+                currentIndex = index;
+                // Dots
+                dotsContainer.querySelectorAll('.carousel-dot').forEach(function(d, i) {
+                    d.classList.toggle('active', i === index);
+                });
+                // Progress
+                progressBar.style.width = ((index + 1) / slideCount * 100) + '%';
+                // Counter
+                counter.textContent = (index + 1) + ' / ' + slideCount;
+            }
+
+            function scrollToSlide(index) {
+                const slides = track.querySelectorAll('.carousel-slide');
+                if (slides[index]) {
+                    var targetLeft = slides[index].offsetLeft - 24;
+                    track.scrollTo({ left: targetLeft, behavior: 'smooth' });
+                }
+                resetAutoplay();
+            }
+
+            // Detect current slide on scroll
+            track.addEventListener('scroll', function() {
+                const slides = track.querySelectorAll('.carousel-slide');
+                const trackLeft = track.scrollLeft;
+                let closest = 0;
+                let minDist = Infinity;
+                slides.forEach(function(slide, i) {
+                    var dist = Math.abs(slide.offsetLeft - trackLeft - 24);
+                    if (dist < minDist) { minDist = dist; closest = i; }
+                });
+                if (closest !== currentIndex) updateUI(closest);
+            });
+
+            // Autoplay
+            function startAutoplay() {
+                autoplayTimer = setInterval(function() {
+                    var next = (currentIndex + 1) % slideCount;
+                    scrollToSlide(next);
+                }, 4000);
+            }
+            function resetAutoplay() {
+                clearInterval(autoplayTimer);
+                startAutoplay();
+            }
+
+            // Pause on touch
+            track.addEventListener('touchstart', function() { clearInterval(autoplayTimer); });
+            track.addEventListener('touchend', function() { startAutoplay(); });
+
+            startAutoplay();
+        })();
+    </script>
+
+    <!-- Accordion Script -->
+    <script>
+        function toggleAccordion() {
+            const body = document.getElementById('accordion-body');
+            const chevron = document.getElementById('accordion-chevron');
+            const trigger = document.getElementById('accordion-trigger');
+            if (body.classList.contains('open')) {
+                body.style.maxHeight = null;
+                body.classList.remove('open');
+                chevron.classList.remove('rotate');
+                trigger.classList.remove('opened');
+            } else {
+                body.style.maxHeight = body.scrollHeight + 'px';
+                body.classList.add('open');
+                chevron.classList.add('rotate');
+                trigger.classList.add('opened');
+            }
+        }
+    </script>
+
+    <!-- Lightbox Script -->
+    <script>
+        const slides = [
+            'slides/new_slide_1.png',
+            'slides/new_slide_2.png',
+            'slides/slide_6.png',
+            'slides/slide_5.png',
+            'slides/new_slide_5.png',
+            'slides/slide_2.png',
+            'slides/slide_3.png',
+            'slides/slide_4.png',
+        ];
+        let currentSlide = 0;
+
+        function openLightbox(index) {
+            currentSlide = index;
+            const overlay = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = slides[currentSlide];
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(dir) {
+            currentSlide = (currentSlide + dir + slides.length) % slides.length;
+            document.getElementById('lightbox-img').src = slides[currentSlide];
+        }
+
+        document.addEventListener('keydown', function(e) {
+            const overlay = document.getElementById('lightbox');
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Lightbox swipe support for mobile
+        (function() {
+            var lbOverlay = document.getElementById('lightbox');
+            var touchStartX = 0;
+            var touchStartY = 0;
+            var touchEndX = 0;
+
+            lbOverlay.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            }, { passive: true });
+
+            lbOverlay.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                var touchEndY = e.changedTouches[0].screenY;
+                var diffX = touchEndX - touchStartX;
+                var diffY = Math.abs(touchEndY - touchStartY);
+                // Only trigger if horizontal swipe > 50px and more horizontal than vertical
+                if (Math.abs(diffX) > 50 && Math.abs(diffX) > diffY) {
+                    if (diffX < 0) {
+                        navigateLightbox(1);  // swipe left = next
+                    } else {
+                        navigateLightbox(-1); // swipe right = prev
+                    }
+                    e.preventDefault();
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
